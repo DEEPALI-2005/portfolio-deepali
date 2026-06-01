@@ -1,14 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { HeroScene } from './HeroScene';
-import { ArrowRight, Download, Mail } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import portfolioData from '@/data/portfolio';
 
 export function Hero() {
-  const [isSceneLoaded, setIsSceneLoaded] = useState(false);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -42,7 +40,6 @@ export function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        onAnimationComplete={() => setIsSceneLoaded(true)}
       >
         {/* Name */}
         <motion.div variants={itemVariants}>

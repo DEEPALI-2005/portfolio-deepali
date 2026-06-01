@@ -4,7 +4,6 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import portfolioData, { Project } from '@/data/portfolio';
 import { Github, ExternalLink, Search, X } from 'lucide-react';
-import Image from 'next/image';
 
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState('All');
