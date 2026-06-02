@@ -135,17 +135,27 @@ export function Projects() {
                 className="glass-effect glow-border rounded-xl overflow-hidden cursor-pointer group"
               >
                 {/* Project Image Placeholder */}
-                <div className="relative w-full h-48 bg-gradient-to-br from-accent/20 to-accent-alt/20 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg bg-gradient-to-br from-accent to-accent-alt flex items-center justify-center">
-                        <span className="text-2xl">📁</span>
-                      </div>
-                      <p className="text-xs text-slate-400">Project Screenshot</p>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
-                </div>
+
+<div className="relative w-full h-48 bg-gradient-to-br from-accent/20 to-accent-alt/20 overflow-hidden">
+  {project.image ? (
+    <img 
+      src={project.image} 
+      alt={project.title}
+      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+    />
+  ) : (
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-16 h-16 mx-auto mb-2 rounded-lg bg-gradient-to-br from-accent to-accent-alt flex items-center justify-center">
+          <span className="text-2xl">📁</span>
+        </div>
+        <p className="text-xs text-slate-400">No Image</p>
+      </div>
+    </div>
+  )}
+  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+</div>
+
 
                 {/* Project Info */}
                 <div className="p-6">
@@ -270,15 +280,23 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
 
         {/* Content */}
         <div className="p-6">
-          {/* Image Placeholder */}
-          <div className="w-full h-64 bg-gradient-to-br from-accent/20 to-accent-alt/20 rounded-lg flex items-center justify-center mb-6">
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-2 rounded-lg bg-gradient-to-br from-accent to-accent-alt flex items-center justify-center">
-                <span className="text-4xl">📁</span>
-              </div>
-              <p className="text-slate-400">Project Screenshot Placeholder</p>
-            </div>
-          </div>
+          {/* Project Image */}
+{project.image ? (
+  <img 
+    src={project.image} 
+    alt={project.title}
+    className="w-full h-64 object-cover rounded-lg mb-6"
+  />
+) : (
+  <div className="w-full h-64 bg-gradient-to-br from-accent/20 to-accent-alt/20 rounded-lg flex items-center justify-center mb-6">
+    <div className="text-center">
+      <div className="w-20 h-20 mx-auto mb-2 rounded-lg bg-gradient-to-br from-accent to-accent-alt flex items-center justify-center">
+        <span className="text-4xl">📁</span>
+      </div>
+      <p className="text-slate-400">No Image Available</p>
+    </div>
+  </div>
+)}
 
           {/* Description */}
           <div className="mb-6">

@@ -64,7 +64,7 @@ export const portfolioData ={
       description: 'A full-stack platform to showcase skills, learning, and collaboration.',
       category: 'Full-Stack',
       technologies: ['JavaScript', 'TypeScript', 'React', 'Node.js', 'MongoDB', 'Express.js', 'Socket.IO', 'Tailwind CSS', 'HuggingFace AI', 'JWT'],
-      image: '/images/projects/skillsphere.jpg',
+      image: '/projects/skillsphere.jpg',
       github: 'https://github.com/DEEPALI-2005/Skillsphere',
       live: 'https://skillsphere-client.vercel.app',
       features: [
@@ -80,7 +80,7 @@ export const portfolioData ={
       description: 'A responsive website/app for SheCan Foundation with clean UI and sections.',
       category: 'Frontend',
       technologies: ['JavaScript', 'React', 'Tailwind CSS', 'HTML'],
-      image: '/images/projects/shecan-foundation.jpg',
+      image: '/projects/shecan-foundation.jpg',
       github: 'https://github.com/DEEPALI-2005/shecan-foundation-app',
       live: 'https://deepali-2005.github.io/shecan-foundation-app/',
       features: [
@@ -96,7 +96,7 @@ export const portfolioData ={
       description: 'A cafe website with menu showcase and ordering capabilities.',
       category: 'Website',
       technologies: ['HTML', 'CSS', 'JavaScript','Neon','PostgreSQL'],
-      image: '/images/projects/pizza-amore.jpg',
+      image: '/projects/pizza-amore.jpg',
       github: 'https://github.com/DEEPALI-2005/pizza-amore',
       live: 'https://pizza-amore-beta.vercel.app/',
       features: [
