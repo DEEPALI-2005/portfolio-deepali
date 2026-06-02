@@ -71,7 +71,19 @@ export function About() {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-accent to-accent-alt mx-auto"></div>
           </motion.div>
-
+        {/* Profile Photo */}
+          <motion.div variants={itemVariants} className="flex justify-center mb-16">
+            <div className="relative">
+              <div className="w-56 h-56 rounded-full border-4 border-accent overflow-hidden shadow-2xl">
+                <img 
+                  src="deepali.jpg" 
+                  alt="Deepali Chaudhary" 
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </motion.div>
           {/* Content Grid */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             {/* Left: Text Content */}
