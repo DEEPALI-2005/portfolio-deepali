@@ -218,7 +218,7 @@ export function Contact() {
               <input
                 type="hidden"
                 name="access_key"
-                value={portfolioData.contact.web3formsKey}
+                value={portfolioData.contact.web3forms_key}
               />
               <input type="hidden" name="from_name" value="Portfolio Contact" />
               <input

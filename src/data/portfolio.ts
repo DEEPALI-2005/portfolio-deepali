@@ -144,11 +144,10 @@ export const portfolioData ={
     secondaryCTA: 'Get In Touch',
     resumeCTA: 'Download Resume',
   },
-
   contact: {
-    formTitle: 'Let\'s Connect',
-    formDescription: 'Have a project in mind? Get in touch and let\'s create something amazing together.',
-    web3formsKey: 'YOUR_WEB3FORMS_ACCESS_KEY', // Replace with your actual key from https://web3forms.com
+    web3forms_key: '8a69749c-8ccf-4ac6-915d-7f077278e7ff',
+    email: 'deepali3705@gmail.com',
+    phone: '+91 8126031455',
   },
 };
 
