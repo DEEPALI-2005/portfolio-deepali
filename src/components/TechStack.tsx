@@ -26,6 +26,11 @@ export function TechStack() {
 
   const categories = [
     {
+      name: 'Coding Languages',
+      items: portfolioData.techStack.languages,
+      color: 'from-pink-400 to-blue-500',
+    },
+    {
       name: 'Frontend',
       items: portfolioData.techStack.frontend,
       color: 'from-accent to-accent',
@@ -45,18 +50,21 @@ export function TechStack() {
       items: portfolioData.techStack.tools,
       color: 'from-cyan-400 to-blue-500',
     },
+    {
+      name: 'Concepts & Fundamentals',
+      items: portfolioData.techStack.concept,
+      color: 'from-yellow-400 to-orange-500',
+    },
   ];
 
   return (
     <section id="tech-stack" className="py-20 px-4 bg-secondary relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-0 w-96 h-96 bg-accent-alt/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

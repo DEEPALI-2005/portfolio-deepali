@@ -1,9 +1,3 @@
-/**
- * PORTFOLIO DATA FILE
- * Edit this file to update your portfolio content
- * All sections are customizable here
- */
-
 export interface Project {
   id: string;
   title: string;
@@ -33,8 +27,7 @@ export interface Education {
   year: string;
 }
 
-export const portfolioData = {
-  // Personal Information
+export const portfolioData ={
   personal: {
     name: 'Deepali',
     fullName: 'Deepali Chaudhary',
@@ -47,34 +40,33 @@ export const portfolioData = {
     bio: 'Passionate full-stack developer with expertise in building scalable web applications. I specialize in creating intuitive user interfaces and robust backend systems that work seamlessly together.',
   },
 
-  // Social Links
   social: {
     github: 'https://github.com/DEEPALI-2005',
     linkedin: 'https://www.linkedin.com/in/deepali-chaudhary-d3705',
-    twitter: 'https://twitter.com', // Add if you have
+    twitter: 'https://twitter.com', 
     email: 'deepali3705@gmail.com',
     whatsapp: '+91 8126031455',
   },
 
-  // Tech Stack
   techStack: {
-    frontend: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Three.js'],
-    backend: ['Node.js', 'Express.js', 'Python', 'REST APIs', 'GraphQL'],
-    database: ['MongoDB', 'PostgreSQL', 'Firebase', 'MySQL'],
-    tools: ['Git', 'Docker', 'VS Code', 'Webpack', 'npm', 'Vercel', 'Railway', 'GitHub'],
+    languages: ['C++', 'Java', 'Python', 'JavaScript'],
+    frontend: ['React', 'HTML5', 'CSS3', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    backend: ['Node.js', 'Express.js', 'REST APIs', 'Socket.IO', 'JWT'],
+    database: ['MongoDB', 'PostgreSQL', 'MySQL'],
+    tools: ['Git', 'Docker', 'VS Code', 'Neon', 'Vercel', 'Railway', 'GitHub'],
+    concept: ['DSA', 'Operating Systems', 'DBMS', 'Computer Networks', 'Cyber Security','Compiler Design'],
   },
 
-  // Projects
   projects: [
     {
       id: 'skillsphere',
       title: 'Skillsphere',
       description: 'A full-stack platform to showcase skills, learning, and collaboration.',
       category: 'Full-Stack',
-      technologies: ['JavaScript', 'React', 'Node.js', 'MongoDB'],
+      technologies: ['JavaScript', 'TypeScript', 'React', 'Node.js', 'MongoDB', 'Express.js', 'Socket.IO', 'Tailwind CSS', 'HuggingFace AI', 'JWT'],
       image: '/images/projects/skillsphere.jpg',
       github: 'https://github.com/DEEPALI-2005/Skillsphere',
-      live: null,
+      live: 'https://skillsphere-client.vercel.app',
       features: [
         'User authentication and profiles',
         'Skill showcase and portfolio',
@@ -103,58 +95,56 @@ export const portfolioData = {
       title: 'Pizza Amore',
       description: 'A cafe website with menu showcase and ordering capabilities.',
       category: 'Website',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
+      technologies: ['HTML', 'CSS', 'JavaScript','Neon','PostgreSQL'],
       image: '/images/projects/pizza-amore.jpg',
       github: 'https://github.com/DEEPALI-2005/pizza-amore',
-      live: 'https://pizza-amore-production.up.railway.app/',
+      live: 'https://pizza-amore-beta.vercel.app/',
       features: [
         'Menu display',
         'Order management',
         'Restaurant information',
-        'Contact and location details',
+        'Contact and location details', 
+        'Live Traking of orders',
       ],
     },
   ] as Project[],
 
-  // Experience
   experience: [
     {
       id: 'exp-1',
       company: 'Freelance',
       position: 'Full Stack Web Developer',
-      period: '2023 - Present',
+      period: '2024 - Present',
       description:
         'Developing full-stack web applications for various clients, focusing on scalability and user experience.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'TypeScript'],
+      technologies: ['React', 'Node.js', 'PostrageSQL', 'TypeScript','Tailwind CSS'],
     },
   ] as Experience[],
 
-  // Education
   education: [
     {
       id: 'edu-1',
-      institution: 'Your University Name',
+      institution: 'Graphic Era Hill University, Dehradun',
       degree: "Bachelor's Degree",
-      field: 'Computer Science / Information Technology',
-      year: '2020 - 2024',
+      field: 'Computer Science and  Engineering',
+      year: '2023 - 2027',
     },
   ] as Education[],
 
-  // Resume
+
   resume: {
     filename: 'resume.pdf',
     path: '/resume.pdf',
     downloadText: 'Download Resume',
   },
 
-  // Hero CTA
+
   hero: {
     mainCTA: 'View My Work',
     secondaryCTA: 'Get In Touch',
     resumeCTA: 'Download Resume',
   },
 
-  // Contact Form
   contact: {
     formTitle: 'Let\'s Connect',
     formDescription: 'Have a project in mind? Get in touch and let\'s create something amazing together.',
