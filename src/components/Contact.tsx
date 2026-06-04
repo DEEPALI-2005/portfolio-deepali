@@ -25,18 +25,17 @@ export function Contact() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormStatus('loading');
 
     try {
-      // Using Web3Forms - replace with your actual access key
-      const formElement = e.currentTarget as HTMLFormElement;
-      const formDataToSend = new FormData(formElement);
-
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://formspree.io/f/mjgdvalo', {
         method: 'POST',
-        body: formDataToSend,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -214,19 +213,6 @@ export function Contact() {
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Hidden fields for Web3Forms */}
-              <input
-                type="hidden"
-                name="access_key"
-                value={portfolioData.contact.web3forms_key}
-              />
-              <input type="hidden" name="from_name" value="Portfolio Contact" />
-              <input
-                type="hidden"
-                name="subject"
-                value="New message from your portfolio!"
-              />
-
               {/* Name Input */}
               <div>
                 <label htmlFor="name" className="block text-sm font-body text-slate-300 mb-2">
@@ -297,11 +283,6 @@ export function Contact() {
                       ? '✗ Error Sending'
                       : 'Send Message'}
               </button>
-
-              {/* Form Note */}
-              <p className="text-xs text-slate-500 text-center">
-                Note: To enable email notifications, replace the Web3Forms access key in portfolio.ts
-              </p>
             </form>
           </motion.div>
 
