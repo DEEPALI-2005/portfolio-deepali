@@ -28,16 +28,16 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormStatus('loading');
-
+  
     try {
+      const formElement = e.currentTarget as HTMLFormElement;
+      const formDataToSend = new FormData(formElement);
+  
       const response = await fetch('https://formspree.io/f/mjgdvalo', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        body: formDataToSend,
       });
-
+  
       if (response.ok) {
         setFormStatus('success');
         setFormData({ name: '', email: '', message: '' });
@@ -47,6 +47,7 @@ export function Contact() {
         setTimeout(() => setFormStatus('idle'), 3000);
       }
     } catch (error) {
+      console.error('Error:', error);
       setFormStatus('error');
       setTimeout(() => setFormStatus('idle'), 3000);
     }
