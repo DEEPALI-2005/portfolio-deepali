@@ -38,13 +38,11 @@ export function Contact() {
         body: formDataToSend,
       });
   
-      // Formspree returns 200 on success
       if (response.status === 200 || response.ok) {
         setFormStatus('success');
         setFormData({ name: '', email: '', message: '' });
         setTimeout(() => setFormStatus('idle'), 3000);
       } else {
-        // Even if there's an error, message might still be sent
         const data = await response.json();
         if (data.ok) {
           setFormStatus('success');
@@ -57,7 +55,6 @@ export function Contact() {
       }
     } catch (error) {
       console.error('Error:', error);
-      // Still mark as success since message is being sent
       setFormStatus('success');
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setFormStatus('idle'), 3000);
@@ -91,14 +88,12 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-20 px-4 bg-secondary relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-0 w-96 h-96 bg-accent-alt/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -116,14 +111,12 @@ export function Contact() {
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {/* Contact Info Cards */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {/* Email Card */}
             <motion.div
               variants={itemVariants}
               className="glass-effect glow-border p-6 rounded-xl text-center group cursor-pointer"
@@ -158,7 +151,6 @@ export function Contact() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {/* Phone Card */}
             <motion.div
               variants={itemVariants}
               className="glass-effect glow-border p-6 rounded-xl text-center group cursor-pointer"
@@ -192,12 +184,11 @@ export function Contact() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {/* Location Card */}
             <motion.div
               variants={itemVariants}
               className="glass-effect glow-border p-6 rounded-xl text-center"
             >
-              <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+              <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-accent to-accent-alt flex items-center justify-center">
                 <MapPin size={24} className="text-primary" />
               </div>
               <h3 className="font-display font-semibold text-white mb-2">
@@ -210,9 +201,7 @@ export function Contact() {
           </motion.div>
         </div>
 
-        {/* Contact Form & Social */}
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -225,7 +214,6 @@ export function Contact() {
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Name Input */}
               <div>
                 <label htmlFor="name" className="block text-sm font-body text-slate-300 mb-2">
                   Name *

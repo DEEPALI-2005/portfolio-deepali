@@ -8,14 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0f172a',
-        secondary: '#1e293b',
-        accent: '#00d9ff',
-        'accent-alt': '#6366f1',
+        primary: '#1a1f2e',
+        secondary: '#232a3a',
+        accent: '#6ec4a8',
+        'accent-alt': '#5fb396',
       },
       fontFamily: {
         display: ['Space Grotesk', 'sans-serif'],
-        body: ['Fira Code', 'monospace'],
+        body: ['Inter', 'sans-serif'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -28,8 +28,8 @@ module.exports = {
           '50%': { transform: 'translateY(20px)' },
         },
         glow: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 217, 255, 0.5)' },
-          '50%': { boxShadow: '0 0 30px rgba(99, 102, 241, 0.8)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(110, 196, 168, 0.3)' },
+          '50%': { boxShadow: '0 0 30px rgba(95, 179, 150, 0.5)' },
         },
         'pulse-glow': {
           '0%, 100%': { opacity: '0.5' },

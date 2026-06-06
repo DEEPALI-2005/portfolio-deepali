@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,36 +16,32 @@ html {
 
 body {
   @apply bg-primary text-white font-body;
-  background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+  background: linear-gradient(135deg, #1a1f2e 0%, #232a3a 100%);
   position: relative;
   overflow-x: hidden;
 }
 
-/* Remove default scrollbar for custom styling */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #1a1f2e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00d9ff;
+  background: #6ec4a8;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6366f1;
+  background: #5fb396;
 }
 
-/* Selection color */
 ::selection {
-  background-color: #00d9ff;
-  color: #0f172a;
+  background-color: #6ec4a8;
+  color: #1a1f2e;
 }
-
-/* Custom animations */
 @keyframes slideInUp {
   from {
     opacity: 0;
@@ -101,33 +97,31 @@ body {
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+    box-shadow: 0 0 20px rgba(110, 196, 168, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(99, 102, 241, 0.8);
+    box-shadow: 0 0 30px rgba(95, 179, 150, 0.5);
   }
 }
-
-/* Utility classes */
 .glass-effect {
-  background: rgba(30, 41, 59, 0.4);
+  background: rgba(35, 42, 58, 0.4);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(110, 196, 168, 0.15);
 }
 
 .glow-border {
-  border: 1px solid rgba(0, 217, 255, 0.3);
-  box-shadow: 0 0 20px rgba(0, 217, 255, 0.1), inset 0 0 20px rgba(0, 217, 255, 0.05);
+  border: 1px solid rgba(110, 196, 168, 0.3);
+  box-shadow: 0 0 20px rgba(110, 196, 168, 0.1), inset 0 0 20px rgba(110, 196, 168, 0.05);
   transition: all 0.3s ease;
 }
 
 .glow-border:hover {
-  border-color: rgba(0, 217, 255, 0.5);
-  box-shadow: 0 0 30px rgba(0, 217, 255, 0.3), inset 0 0 20px rgba(0, 217, 255, 0.1);
+  border-color: rgba(110, 196, 168, 0.5);
+  box-shadow: 0 0 30px rgba(110, 196, 168, 0.3), inset 0 0 20px rgba(110, 196, 168, 0.1);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #00d9ff 0%, #6366f1 100%);
+  background: linear-gradient(135deg, #6ec4a8 0%, #5fb396 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -153,21 +147,16 @@ body {
 .button-glow:hover::before {
   left: 100%;
 }
-
-/* Smooth transitions for interactive elements */
 a,
 button {
   transition: all 0.3s ease;
 }
-
-/* Focus styles for accessibility */
 button:focus,
 a:focus {
-  outline: 2px solid #00d9ff;
+  outline: 2px solid #6ec4a8;
   outline-offset: 2px;
 }
 
-/* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -178,11 +167,9 @@ a:focus {
     scroll-behavior: auto !important;
   }
 }
-
-/* Loading spinner */
 .spinner {
-  border: 2px solid rgba(0, 217, 255, 0.1);
-  border-top: 2px solid #00d9ff;
+  border: 2px solid rgba(110, 196, 168, 0.1);
+  border-top: 2px solid #6ec4a8;
   border-radius: 50%;
   width: 40px;
   height: 40px;

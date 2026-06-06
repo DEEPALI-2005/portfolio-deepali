@@ -1,9 +1,7 @@
 'use client';
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import portfolioData from '@/data/portfolio';
-
 export function TechStack() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -14,7 +12,6 @@ export function TechStack() {
       },
     },
   };
-
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -23,12 +20,11 @@ export function TechStack() {
       transition: { duration: 0.5 },
     },
   };
-
   const categories = [
     {
       name: 'Coding Languages',
       items: portfolioData.techStack.languages,
-      color: 'from-pink-400 to-blue-500',
+      color: 'from-accent-alt to-cyan-500',
     },
     {
       name: 'Frontend',
@@ -38,22 +34,22 @@ export function TechStack() {
     {
       name: 'Backend',
       items: portfolioData.techStack.backend,
-      color: 'from-accent-alt to-accent-alt',
+      color: 'from-accent to-accent',
     },
     {
       name: 'Database',
       items: portfolioData.techStack.database,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-accent-alt to-cyan-500',
     },
     {
       name: 'Tools & Platforms',
       items: portfolioData.techStack.tools,
-      color: 'from-cyan-400 to-blue-500',
+      color: 'from-accent-alt to-cyan-500',
     },
     {
       name: 'Concepts & Fundamentals',
       items: portfolioData.techStack.concept,
-      color: 'from-yellow-400 to-orange-500',
+      color: 'from-accent to-accent',
     },
   ];
 
@@ -81,7 +77,6 @@ export function TechStack() {
           <div className="w-20 h-1 bg-gradient-to-r from-accent to-accent-alt mx-auto mt-4"></div>
         </motion.div>
 
-        {/* Tech Categories */}
         <motion.div
           className="grid md:grid-cols-2 gap-12"
           variants={containerVariants}
@@ -113,7 +108,6 @@ export function TechStack() {
           ))}
         </motion.div>
 
-        {/* Tech Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
