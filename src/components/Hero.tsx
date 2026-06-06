@@ -7,8 +7,6 @@ import { ArrowRight, Download } from 'lucide-react';
 import portfolioData from '@/data/portfolio';
 
 export function Hero() {
-  const [isSceneLoaded, setIsSceneLoaded] = useState(false);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -40,7 +38,6 @@ export function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        onAnimationComplete={() => setIsSceneLoaded(true)}
       >
         <motion.div variants={itemVariants} className="mb-6">
           <span className="inline-block px-4 py-2 rounded-full bg-accent/15 border border-accent/40 text-accent text-sm font-body font-medium">
