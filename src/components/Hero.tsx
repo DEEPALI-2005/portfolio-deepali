@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { HeroScene } from './HeroScene';
 import { ArrowRight, Download } from 'lucide-react';
@@ -29,40 +29,55 @@ export function Hero() {
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary pt-20 pb-20">
+      {/* 3D Background Scene */}
       <div className="absolute inset-0 w-full h-full opacity-35">
         <HeroScene />
       </div>
+
+      {/* Subtle Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20"></div>
+
+      {/* Content Overlay */}
       <motion.div
         className="relative z-10 text-center px-4 max-w-3xl mx-auto"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
+        {/* Badge/Subtitle */}
         <motion.div variants={itemVariants} className="mb-6">
           <span className="inline-block px-4 py-2 rounded-full bg-accent/15 border border-accent/40 text-accent text-sm font-body font-medium">
-            Welcome to my portfolio
+            👋 Welcome to my portfolio
           </span>
         </motion.div>
+
+        {/* Name */}
         <motion.div variants={itemVariants}>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 gradient-text leading-tight">
             {portfolioData.personal.name}
           </h1>
         </motion.div>
+
+        {/* Title */}
         <motion.div variants={itemVariants}>
           <p className="text-lg md:text-xl text-accent font-semibold mb-6 tracking-wide">
             {portfolioData.personal.title}
           </p>
         </motion.div>
+
+        {/* Tagline */}
         <motion.div variants={itemVariants}>
           <p className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
             {portfolioData.personal.tagline}
           </p>
         </motion.div>
+
+        {/* CTA Buttons */}
         <motion.div
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap"
         >
+          {/* View Projects Button */}
           <a
             href="#projects"
             className="button-glow group px-8 py-3 bg-gradient-to-r from-accent to-accent-alt text-white font-display font-semibold rounded-lg hover:shadow-xl hover:shadow-accent/40 flex items-center gap-2 transition-all duration-300 whitespace-nowrap"
@@ -70,12 +85,16 @@ export function Hero() {
             {portfolioData.hero.mainCTA}
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </a>
+
+          {/* Contact Button */}
           <a
             href="#contact"
             className="px-8 py-3 border-2 border-accent text-accent font-display font-semibold rounded-lg hover:bg-accent/10 hover:border-accent transition-all duration-300 whitespace-nowrap"
           >
             {portfolioData.hero.secondaryCTA}
           </a>
+
+          {/* Resume Button */}
           <a
             href={portfolioData.resume.path}
             download
@@ -85,6 +104,8 @@ export function Hero() {
             {portfolioData.hero.resumeCTA}
           </a>
         </motion.div>
+
+        {/* Scroll Indicator */}
         <motion.div
           variants={itemVariants}
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
@@ -109,6 +130,8 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </motion.div>
+
+      {/* Animated gradient orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse-glow"></div>
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-accent-alt/10 rounded-full blur-3xl animate-pulse-glow"></div>
